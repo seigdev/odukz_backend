@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors');
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
@@ -43,6 +44,10 @@ const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
     console.log('server is running on port ' + PORT)
 })
+
+app.use(cors({
+    origin: 'http://localhost:3000'
+  }));
 
 // set route with url
 app.use('/student', StudentRoute)
