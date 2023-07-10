@@ -46,7 +46,7 @@ app.listen(PORT, () => {
 })
 
 app.use(cors({
-    origin: 'http://localhost:3000', 'https://beatsbydan.github.io'
+    origin: ['http://localhost:3000', 'https://beatsbydan.github.io']
   }));
 
 // set route with url
